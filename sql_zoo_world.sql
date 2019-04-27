@@ -27,3 +27,15 @@ ORDER BY name
 --9
 SELECT name FROM world
 WHERE name LIKE '%o__o%'
+--10
+SELECT name FROM world
+WHERE name LIKE '____'
+--11
+SELECT name FROM world
+WHERE name LIKE capital
+--12
+SELECT name FROM world
+WHERE capital LIKE concat(name, '%city')
+--13
+SELECT capital, name FROM world
+WHERE capital LIKE concat('%', name, '%')
