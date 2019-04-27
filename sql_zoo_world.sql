@@ -20,3 +20,10 @@ WHERE name Like '%oo%'
 --7
 SELECT name FROM world
 WHERE LOWER(name) LIKE '%a%a%a%'
+--8
+SELECT name FROM world
+WHERE name LIKE '_t%'
+ORDER BY name
+--9
+SELECT name FROM world
+WHERE name LIKE '%o__o%'
