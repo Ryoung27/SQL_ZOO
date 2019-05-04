@@ -31,3 +31,6 @@ AND gdp/population > (
 SELECT name, continent FROM world
 WHERE continent IN (SELECT continent FROM world
 WHERE name in ('Argentina', 'Australia')) ORDER BY name
+--4.4
+SELECT name, population FROM world
+WHERE population > (SELECT population FROM world WHERE name in ('Canada')) AND population < (SELECT population FROM world WHERE name in ('Poland'))
