@@ -34,3 +34,11 @@ WHERE name in ('Argentina', 'Australia')) ORDER BY name
 --4.4
 SELECT name, population FROM world
 WHERE population > (SELECT population FROM world WHERE name in ('Canada')) AND population < (SELECT population FROM world WHERE name in ('Poland'))
+--5
+SELECT name, CONCAT(ROUND(population/(SELECT population FROM world WHERE name = 'Germany')*100), '%') FROM world WHERE continent = 'Europe';
+--6
+SELECT name FROM world
+WHERE gdp > ALL(SELECT gdp FROM world WHERE continent = 'EUROPE' and GDP > 0)
+--7
+SELECT continent, name, area FROM world x
+WHERE area >= ALL(SELECT area FROM world y WHERE y.continent=x.continent AND y.area > 0)
