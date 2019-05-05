@@ -24,3 +24,10 @@ WHERE coach = 'Fernando Santos'
 SELECT player
 FROM game JOIN goal ON (game.id = goal.matchid)
 WHERE stadium = 'National Stadium, Warsaw'
+
+--More Join
+--1
+SELECT id, title
+ FROM movie
+ WHERE yr=1962
+ --2
