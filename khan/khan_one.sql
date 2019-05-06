@@ -125,6 +125,22 @@ SELECT type FROM exercise_logs
 GROUP BY type
 HAVING count(*) >= 2;
 
+SELECT COUNT(*) FROM exercise_logs
+WHERE heart_rate > 220 -30;
+
+SELECT COUNT(*) FROM exercise_logs
+WHERE heart_rate >= ROUND(0.5 * (220 -30))
+AND heart_rate <= ROUND(0.9 * (220 -30));
+
+--CASE STATEMENT
+SELECT type, heart_rate FROM exercise_logs
+CASE
+WHEN heart_rate > 220 -30 THEN "above max"
+WHEN heart_rate >= 90 THEN "above target"
+WHEN heart_rate >= 50 THEN "above target"
+ELSE "below target"
+END as "hr_zone";
+
 --Total words
 CREATE TABLE books (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
