@@ -100,3 +100,8 @@ SELECT * FROM exercise_logs WHERE calories > 50 and minutes < 30 ORDER BY calori
 -- or
 SELECT * FROM exercise_logs WHERE calories > 50 or heart_rate > 100 ORDER BY
 calories;
+
+--POP in
+SELECT title FROM songs Where artist = 'Queen';
+SELECT name FROM artists Where genre = 'Pop';
+SELECT title FROM songs WHERE artist IN ("Taylor Swift", "Celine Dion", "Rihanna", "Gloria Estefan");
