@@ -105,3 +105,22 @@ calories;
 SELECT title FROM songs Where artist = 'Queen';
 SELECT name FROM artists Where genre = 'Pop';
 SELECT title FROM songs WHERE artist IN ("Taylor Swift", "Celine Dion", "Rihanna", "Gloria Estefan");
+
+--Exercise Log
+SELECT type, SUM(calories) AS total_calories
+FROM exercise_logs
+GROUP BY (type);
+
+SELECT type, SUM(calories) AS total_calories
+exercise_logs
+    GROUP BY type
+    HAVING total_calories > 150;
+
+SELECT type, AVG(calores) AS avg_calories FROM exercise_logs
+GROUP BY type
+HAVING avg_calories > 70
+;
+
+SELECT type FROM exercise_logs
+GROUP BY type
+HAVING count(*) >= 2;
