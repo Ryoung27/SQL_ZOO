@@ -272,3 +272,13 @@ SELECT movies.title, sequels.title
 FROM movies
 LEFT OUTER JOIN movies sequels
 ON movies.sequel_id = sequels.id;
+
+SELECT persons.fullname, hobbies.name FROM persons
+JOIN hobbies
+ON persons.id = hobbies.person_id;
+
+SELECT a.fullname, b.fullname FROM friends
+JOIN persons a
+ON friends.person1_id = a.id
+JOIN persons b
+ON friends.person2_id = b.id
