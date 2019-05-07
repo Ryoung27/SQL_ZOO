@@ -252,3 +252,5 @@ WHERE persons.name = 'Bobby McBobbyFace';
 
 SELECT students.first_name, students.last_name, student_projects.title
 FROM students LEFT OUTER JOIN student_projects ON students.id = student_projects.student_id;
+
+SELECT customers.name, customers.email, orders.item, orders.price FROM customers LEFT OUTER JOIN orders ON customers.id = orders.customer_id;
