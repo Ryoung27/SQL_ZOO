@@ -224,3 +224,20 @@ FROM student_grades;
 SELECT number_grade, COUNT (*)
 FROM student_grades
 Group by number_grade;
+
+
+--JOIN
+SELECT * FROM student_grades;
+
+--CROSS JOIN
+SELECT * FROM student_grades, students;
+
+-- implicit INNER JOIN
+SELECT * FROM student_grades, students;
+    WHERE student_grades.student_id = students.id;
+
+-- explicit INNER JOIN
+SELECT students.first_name, students.last_name, students.email, student_grades.test, student_grades.grade FROM students;
+ JOIN student_grades
+ ON students.id = student_grades.student_id
+ WHERE grade > 90;
