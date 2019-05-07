@@ -241,3 +241,11 @@ SELECT students.first_name, students.last_name, students.email, student_grades.t
  JOIN student_grades
  ON students.id = student_grades.student_id
  WHERE grade > 90;
+
+ SELECT persons.name, hobbies.name FROM persons JOIN hobbies ON persons.id = hobbies.person_id;
+
+SELECT persons.name, hobbies.name FROM persons JOIN hobbies ON persons.id = hobbies.person_id;
+
+
+SELECT persons.name, hobbies.name FROM persons JOIN hobbies ON persons.id = hobbies.person_id
+WHERE persons.name = 'Bobby McBobbyFace';
