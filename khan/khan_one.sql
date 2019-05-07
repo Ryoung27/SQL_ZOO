@@ -249,3 +249,6 @@ SELECT persons.name, hobbies.name FROM persons JOIN hobbies ON persons.id = hobb
 
 SELECT persons.name, hobbies.name FROM persons JOIN hobbies ON persons.id = hobbies.person_id
 WHERE persons.name = 'Bobby McBobbyFace';
+
+SELECT students.first_name, students.last_name, student_projects.title
+FROM students LEFT OUTER JOIN student_projects ON students.id = student_projects.student_id;
