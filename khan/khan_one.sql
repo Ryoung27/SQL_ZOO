@@ -254,3 +254,21 @@ SELECT students.first_name, students.last_name, student_projects.title
 FROM students LEFT OUTER JOIN student_projects ON students.id = student_projects.student_id;
 
 SELECT customers.name, customers.email, orders.item, orders.price FROM customers LEFT OUTER JOIN orders ON customers.id = orders.customer_id;
+
+SELECT customers.name, customers.email, SUM(price) as orders FROM customers LEFT OUTER JOIN orders ON customers.id=orders.customer_id GROUP BY name ORDER BY price DESC;
+
+SELECT id, first_name, last_name, buddy_id FROM students;
+
+-- Self JOIN
+SELECT first_name, last_name, buddies.email
+FROM students JOIN students buddies
+ON students.buddy_id = buddies.id;
+
+SELECT movies. title, sequals.sequal_id
+FROM movies LEFT OUTER JOIN movies sequals
+ON movies.sequal_id = sequals.id;
+
+SELECT movies.title, sequels.title
+FROM movies
+LEFT OUTER JOIN movies sequels
+ON movies.sequel_id = sequels.id;
