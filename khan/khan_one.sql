@@ -282,3 +282,61 @@ JOIN persons a
 ON friends.person1_id = a.id
 JOIN persons b
 ON friends.person2_id = b.id
+
+UPDATE diary_logs SET content = "Blah"
+WHERE user_id = 1 AND date = "2015-01-01"
+
+DELETE FROM diary_logs WHERE id = 1;
+
+--CREATE table documents (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT,
+    content TEXT,
+    author TEXT);
+
+INSERT INTO documents (author, title, content)
+    VALUES ("Puff T.M. Dragon", "Fancy Stuff", "Ceiling wax, dragon wings, etc.");
+INSERT INTO documents (author, title, content)
+    VALUES ("Puff T.M. Dragon", "Living Things", "They're located in the left ear, you know.");
+INSERT INTO documents (author, title, content)
+    VALUES ("Jackie Paper", "Pirate Recipes", "Cherry pie, apple pie, blueberry pie.");
+INSERT INTO documents (author, title, content)
+    VALUES ("Jackie Paper", "Boat Supplies", "Rudder - guitar. Main mast - bed post.");
+INSERT INTO documents (author, title, content)
+    VALUES ("Jackie Paper", "Things I'm Afraid Of", "Talking to my parents, the sea, giant pirates, heights.");
+
+SELECT * FROM documents;
+
+UPDATE documents SET author = 'Jackie Draper'
+WHERE author = 'Jackie Paper';
+
+SELECT * FROM documents;
+DELETE FROM documents WHERE title = "Things I'm Afraid Of";
+SELECT * FROM documents;
+
+CREATE TABLE clothes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    type TEXT,
+    design TEXT);
+
+INSERT INTO clothes (type, design)
+    VALUES ("dress", "pink polka dots");
+INSERT INTO clothes (type, design)
+    VALUES ("pants", "rainbow tie-dye");
+INSERT INTO clothes (type, design)
+    VALUES ("blazer", "black sequin");
+
+-- ALTER TABLE table_name
+--   ADD column_name column_definition;
+ ALTER TABLE clothes
+ ADD price INTEGER;
+ SELECT * FROM clothes;
+
+UPDATE clothes set price = 10 WHERE id=1;
+UPDATE clothes set price = 20 WHERE id=2;
+UPDATE clothes set price = 30 WHERE id=3;
+
+SELECT * FROM clothes;
+INSERT INTO clothes(type, design, price)
+    VALUES("shoe", "Nike", "100");
+SELECT * FROM clothes;
