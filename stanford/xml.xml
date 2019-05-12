@@ -1,0 +1,9 @@
+<!-- Super similar to html -->
+<!-- You can enter data in xml and query in database -->
+<!-- Single Root Element -->
+<Bookstore>
+    <Book_ISBN>
+        <!-- <Elements are stuctured coorectly, no mix up in containers> -->
+        <!-- Unique name -->
+    </Book_ISBN>
+</Bookstore>
