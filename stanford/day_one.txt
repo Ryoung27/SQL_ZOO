@@ -10,3 +10,7 @@ different opitions.
 Cross product allows us to cross tables.
 
 Theta JOIN is a join operator, which is basically the JOIN we use.
+
+--Designing a database schema
+Use higher level tools, haha.
+Tuples everywhere!!!
