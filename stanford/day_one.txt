@@ -14,3 +14,7 @@ Theta JOIN is a join operator, which is basically the JOIN we use.
 --Designing a database schema
 Use higher level tools, haha.
 Tuples everywhere!!!
+
+--Design by decomposition
+mega relations + properties of the database
+System decomposes based on properties
